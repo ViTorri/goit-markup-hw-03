@@ -40,11 +40,11 @@ body {
 }
 
 .container {
-  width: 1128px;
+  width: 1158px;
   margin-left: auto;
   margin-right: auto;
-  padding-right: 12px;
-  padding-left: 12px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .link {
@@ -80,7 +80,6 @@ body {
 .page-header-container {
   display: flex;
   align-items: center;
-  background-color: teal;
 }
 
 .site-nav .link {
@@ -189,9 +188,8 @@ body {
 
 .qualities-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
-
-  background-color: teal;
 }
 
 .qualities-list .quality-item {
@@ -202,6 +200,20 @@ body {
   margin-bottom: 8px;
 }
 /* ==========================WORKS========================== */
+.works {
+  padding-top: 0;
+}
+
+.works-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.works-list .works-item {
+  flex-basis: calc((100% - 48px) / 3);
+}
+
 .works-title {
   font-size: 36px;
   line-height: 1.11;
@@ -209,10 +221,8 @@ body {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--headings-color);
-}
 
-.qualities-list {
-  display: flex;
+  margin-bottom: 72px;
 }
 
 /* ==========================TEAM========================== */
@@ -227,13 +237,18 @@ body {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--headings-color);
+
+  margin-bottom: 72px;
 }
 
 .team-member-name {
   font-size: 20px;
+  font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--headings-color);
+
+  margin-bottom: 8px;
 }
 
 .team-member-position {
@@ -241,6 +256,27 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+}
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.team-list .team-card {
+  flex-basis: calc((100% - 72px) / 4);
+}
+
+.team-content-wrapper {
+  background-color: #ffffff;
+  padding: 32px 16px;
+
+  text-align: center;
+
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
 }
 
 /* ==========================LOGO-FOOTER========================== */
@@ -261,6 +297,8 @@ body {
 
 /* ==========================FOOTER========================== */
 .footer {
+  padding-top: 100px;
+  padding-bottom: 100px;
   background-color: var(--headings-color);
 }
 
@@ -269,9 +307,31 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #e7e9fc;
+  margin-top: 16px;
 }
 
-/* ==========================PORTFOLIO-BTN========================== */
+/* ==========================PORTFOLIO-HEADER========================== */
+.portfolio-header {
+  background: #ffffff;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+/* ==========================PORTFOLIO-BTNS========================== */
+.portfolio {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
+.portfolio-filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-item:not(:last-child) {
+  margin-right: 24px;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -294,13 +354,18 @@ body {
 
   border-radius: 4px;
   border-width: 0;
+
   cursor: pointer;
+
+  padding: 12px 24px;
 }
 
 .filter-btn:hover,
 .filter-btn:focus {
   background-color: var(--primary-accent-color);
   color: var(--main-white);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .filter-btn:active {
@@ -309,11 +374,39 @@ body {
 }
 
 /* ==========================PORTFOLIO-PROJECTS========================== */
+.project-list {
+  margin-top: 72px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  flex-basis: calc((100% - 48px) / 3);
+}
+
+.project-card:not(:nth-child(3n)) {
+  margin-right: 24px;
+}
+
+.project-card:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 48px;
+}
+
+.project-content-wrapper {
+  background-color: #ffffff;
+  padding: 32px 16px;
+  border: 0.5px solid #f4f4fd;
+  border-top: none;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
 .project-list .project-title {
   font-size: 20px;
+  font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--headings-color);
+  margin-bottom: 8px;
 }
 
 .project-list .project-description {
